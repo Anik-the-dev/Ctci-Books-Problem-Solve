@@ -1,0 +1,42 @@
+# Problem: From a given string, find all the characters are unique or not.
+# Solution: ( Assume : ASCII CODE : 128 Char and case-sensitive)
+# Solution 1:
+given = "Anika"
+hmap = []
+def a(given,hmap):
+    
+    for x in given.lower():
+      if x in hmap:
+        return False
+      hmap.append(x)
+    return True
+
+print(a(given,hmap))
+
+# Solution 2:
+def isUnique(string):
+    if len(string)>128:
+        return False
+    char = [False]*128
+    for c in string:
+        val = ord(c)
+        if char[val]:
+            return False
+        char[val] = True
+    return True
+
+print(isUnique("ABCDa".lower()))
+
+#soln 3:
+
+def checkDuplicate(name):
+    sortedList = sorted(name)
+    check = None
+    for x in sortedList:
+        if check ==x:
+            return False
+        check =x
+    return True
+name = "kAbcdefghijkl@#$%^&* Mnop"
+print(checkDuplicate(name))
+
