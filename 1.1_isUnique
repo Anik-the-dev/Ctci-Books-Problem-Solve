@@ -27,8 +27,8 @@ def isUnique(string):
 
 print(isUnique("ABCDa".lower()))
 
-#soln 3:
 
+#soln 3:
 def checkDuplicate(name):
     sortedList = sorted(name)
     check = None
